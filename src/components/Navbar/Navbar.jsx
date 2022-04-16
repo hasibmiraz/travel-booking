@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center h-20 px-4">
       <div>
-        <h1>TRAVEL.</h1>
+        <h1 className={nav ? 'hidden' : 'block'}>TRAVEL.</h1>
       </div>
       <ul className="hidden md:flex">
         <li>HOME</li>
@@ -31,20 +31,24 @@ const Navbar = () => {
         <li>BOOK</li>
       </ul>
       <div className="hidden md:flex">
-        <BiSearch size={20} />
+        <BiSearch className="mr-2" size={20} />
         <BsPerson size={20} />
       </div>
 
       {/* Hamburger */}
-      <div onClick={handleNav} className="md:hidden">
-        {nav ? <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20} />}
+      <div onClick={handleNav} className="md:hidden z-10">
+        {nav ? (
+          <AiOutlineClose size={20} className="text-black" />
+        ) : (
+          <HiOutlineMenuAlt4 size={20} />
+        )}
       </div>
 
       {/* Mobile Menu Dropdown */}
       <div
         className={
           nav
-            ? 'absolute left-[0%] top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'
+            ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'
             : 'absolute left-[-100%]'
         }
       >
