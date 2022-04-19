@@ -3,6 +3,7 @@ import Destinations from './components/Destinations/Destinations';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Search from './components/Search/Search';
+import Selects from './components/Selects/Selects';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Destinations />
       <Search />
+      <Selects />
     </div>
   );
 }
