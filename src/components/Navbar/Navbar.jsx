@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-20 px-4">
+    <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white">
       <div>
         <h1 className={nav ? 'hidden' : 'block'}>TRAVEL.</h1>
       </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'
+            ? 'absolute left-0 text-black top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col'
             : 'absolute left-[-100%]'
         }
       >
